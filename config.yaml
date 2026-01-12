@@ -1,0 +1,10 @@
+bitbucket:
+  workspace: "opstree-pinelabs"
+  repositories:
+    - "*"        # use "*" OR remove and use CSV
+
+github:
+  organization: "Opstree-pinelabs2"
+
+csv:
+  repo_file: "repo_list.csv"

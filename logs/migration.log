@@ -1,0 +1,35 @@
+2026-01-12 16:38:58,303 | INFO | Running command: git config --global user.name yuvrajsingh-opstree
+2026-01-12 16:38:58,308 | INFO | Running command: git config --global user.email 71yuvrajsingh6123@gmail.com
+2026-01-12 16:38:58,312 | INFO | Migrating ALL Bitbucket repositories (list format)
+2026-01-12 16:38:59,138 | INFO | Discovered 5 Bitbucket repos
+2026-01-12 16:38:59,138 | INFO | Total repositories to sync: 5
+2026-01-12 16:38:59,138 | INFO | ===== Syncing repository: opstree-iaac =====
+2026-01-12 16:39:01,331 | INFO | GitHub repo ensured: opstree-iaac
+2026-01-12 16:39:01,331 | INFO | Running command: git fetch --prune
+2026-01-12 16:39:04,055 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/opstree-iaac.git
+2026-01-12 16:39:04,061 | INFO | Running command: git push --mirror github
+2026-01-12 16:39:05,416 | INFO | Completed sync for repository: opstree-iaac
+2026-01-12 16:39:05,416 | INFO | ===== Syncing repository: olly =====
+2026-01-12 16:39:07,460 | INFO | GitHub repo ensured: olly
+2026-01-12 16:39:07,461 | INFO | Running command: git fetch --prune
+2026-01-12 16:39:08,912 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/olly.git
+2026-01-12 16:39:08,916 | INFO | Running command: git push --mirror github
+2026-01-12 16:39:10,585 | INFO | Completed sync for repository: olly
+2026-01-12 16:39:10,586 | INFO | ===== Syncing repository: rems =====
+2026-01-12 16:39:12,712 | INFO | GitHub repo ensured: rems
+2026-01-12 16:39:12,713 | INFO | Running command: git fetch --prune
+2026-01-12 16:39:14,149 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/rems.git
+2026-01-12 16:39:14,154 | INFO | Running command: git push --mirror github
+2026-01-12 16:39:15,535 | INFO | Completed sync for repository: rems
+2026-01-12 16:39:15,535 | INFO | ===== Syncing repository: sre =====
+2026-01-12 16:39:17,653 | INFO | GitHub repo ensured: sre
+2026-01-12 16:39:17,654 | INFO | Running command: git fetch --prune
+2026-01-12 16:39:18,959 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/sre.git
+2026-01-12 16:39:18,961 | INFO | Running command: git push --mirror github
+2026-01-12 16:39:20,729 | INFO | Completed sync for repository: sre
+2026-01-12 16:39:20,729 | INFO | ===== Syncing repository: defalut-branch-testing =====
+2026-01-12 16:39:22,653 | INFO | GitHub repo ensured: defalut-branch-testing
+2026-01-12 16:39:22,653 | INFO | Running command: git fetch --prune
+2026-01-12 16:39:24,033 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/defalut-branch-testing.git
+2026-01-12 16:39:24,036 | INFO | Running command: git push --mirror github
+2026-01-12 16:39:25,646 | INFO | Completed sync for repository: defalut-branch-testing

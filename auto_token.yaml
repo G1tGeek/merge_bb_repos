@@ -1,0 +1,9 @@
+bitbucket:
+  username: "yuvraj.singh"
+  email: "yuvraj.singh@mygurukulam.co"
+  access_token: "your-bitbucket-api-token"
+
+github:
+  username: "yuvrajsingh-opstree"
+  email: "71yuvrajsingh6123@gmail.com"
+  access_token: "your-github-api-token"
