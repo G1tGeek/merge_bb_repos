@@ -11,7 +11,7 @@ def create_github_repo(org, repo, token):
     r = requests.post(
         f"https://api.github.com/orgs/{org}/repos",
         headers=gh_headers(token),
-        json={"name": repo, "private": True},
+        json={"name": repo, "private": True},  #make it vars pvt or public
     )
     if r.status_code not in (201, 422):
         r.raise_for_status()
