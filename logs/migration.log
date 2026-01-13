@@ -33,3 +33,56 @@
 2026-01-12 16:39:24,033 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/defalut-branch-testing.git
 2026-01-12 16:39:24,036 | INFO | Running command: git push --mirror github
 2026-01-12 16:39:25,646 | INFO | Completed sync for repository: defalut-branch-testing
+2026-01-13 14:22:09,613 | INFO | Running command: git config --global user.name yuvrajsingh-opstree
+2026-01-13 14:22:09,621 | INFO | Running command: git config --global user.email 71yuvrajsingh6123@gmail.com
+2026-01-13 14:22:09,624 | INFO | Migrating ALL Bitbucket repositories (list format)
+2026-01-13 14:22:11,255 | INFO | Discovered 5 Bitbucket repos
+2026-01-13 14:22:11,256 | INFO | Total repositories to sync: 5
+2026-01-13 14:22:11,256 | INFO | ===== Syncing repository: opstree-iaac =====
+2026-01-13 14:22:18,230 | INFO | GitHub repo ensured: opstree-iaac
+2026-01-13 14:22:18,231 | INFO | Running command: git fetch --prune
+2026-01-13 14:24:37,660 | INFO | Running command: git config --global user.name yuvrajsingh-opstree
+2026-01-13 14:24:37,665 | INFO | Running command: git config --global user.email 71yuvrajsingh6123@gmail.com
+2026-01-13 14:24:37,670 | INFO | Migrating ALL Bitbucket repositories (list format)
+2026-01-13 14:24:41,052 | INFO | Discovered 5 Bitbucket repos
+2026-01-13 14:24:41,052 | INFO | Total repositories to sync: 5
+2026-01-13 14:24:41,052 | INFO | ===== Syncing repository: opstree-iaac =====
+2026-01-13 14:24:43,903 | INFO | GitHub repo ensured: opstree-iaac
+2026-01-13 14:24:43,904 | INFO | Updating existing mirror
+2026-01-13 14:24:43,904 | INFO | Running command: git remote set-url origin https://***:***@bitbucket.org/opstree-pinelabs/opstree-iaac.git
+2026-01-13 14:24:43,910 | INFO | Running command: git fetch --prune
+2026-01-13 14:24:45,718 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/opstree-iaac.git
+2026-01-13 14:24:45,723 | INFO | Running command: git push --mirror github
+2026-01-13 14:24:48,006 | INFO | Completed sync for repository: opstree-iaac
+2026-01-13 14:24:48,007 | INFO | ===== Syncing repository: olly =====
+2026-01-13 14:24:50,306 | INFO | GitHub repo ensured: olly
+2026-01-13 14:24:50,308 | INFO | Updating existing mirror
+2026-01-13 14:24:50,308 | INFO | Running command: git remote set-url origin https://***:***@bitbucket.org/opstree-pinelabs/olly.git
+2026-01-13 14:24:50,313 | INFO | Running command: git fetch --prune
+2026-01-13 14:24:51,937 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/olly.git
+2026-01-13 14:24:51,941 | INFO | Running command: git push --mirror github
+2026-01-13 14:24:53,545 | INFO | Completed sync for repository: olly
+2026-01-13 14:24:53,545 | INFO | ===== Syncing repository: rems =====
+2026-01-13 14:24:55,656 | INFO | GitHub repo ensured: rems
+2026-01-13 14:24:55,656 | INFO | Updating existing mirror
+2026-01-13 14:24:55,656 | INFO | Running command: git remote set-url origin https://***:***@bitbucket.org/opstree-pinelabs/rems.git
+2026-01-13 14:24:55,661 | INFO | Running command: git fetch --prune
+2026-01-13 14:24:58,289 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/rems.git
+2026-01-13 14:24:58,292 | INFO | Running command: git push --mirror github
+2026-01-13 14:25:02,986 | INFO | Completed sync for repository: rems
+2026-01-13 14:25:02,986 | INFO | ===== Syncing repository: sre =====
+2026-01-13 14:25:06,285 | INFO | GitHub repo ensured: sre
+2026-01-13 14:25:06,286 | INFO | Updating existing mirror
+2026-01-13 14:25:06,286 | INFO | Running command: git remote set-url origin https://***:***@bitbucket.org/opstree-pinelabs/sre.git
+2026-01-13 14:25:06,293 | INFO | Running command: git fetch --prune
+2026-01-13 14:25:09,166 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/sre.git
+2026-01-13 14:25:09,169 | INFO | Running command: git push --mirror github
+2026-01-13 14:25:11,594 | INFO | Completed sync for repository: sre
+2026-01-13 14:25:11,594 | INFO | ===== Syncing repository: defalut-branch-testing =====
+2026-01-13 14:25:16,429 | INFO | GitHub repo ensured: defalut-branch-testing
+2026-01-13 14:25:16,430 | INFO | Updating existing mirror
+2026-01-13 14:25:16,431 | INFO | Running command: git remote set-url origin https://***:***@bitbucket.org/opstree-pinelabs/defalut-branch-testing.git
+2026-01-13 14:25:16,438 | INFO | Running command: git fetch --prune
+2026-01-13 14:25:20,186 | INFO | Running command: git remote set-url github https://***:***@github.com/Opstree-pinelabs2/defalut-branch-testing.git
+2026-01-13 14:25:20,189 | INFO | Running command: git push --mirror github
+2026-01-13 14:25:28,489 | INFO | Completed sync for repository: defalut-branch-testing

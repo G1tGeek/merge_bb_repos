@@ -1,6 +1,7 @@
 import os
 import csv
 import subprocess
+import shutil
 from urllib.parse import quote
 
 from src.git_utils import run
@@ -32,6 +33,7 @@ def get_repos_from_csv(csv_file):
 
     return list(repos)
 
+
 def resolve_repo_list(repos_cfg, workspace, email, token):
     """
     Supported formats:
@@ -40,17 +42,14 @@ def resolve_repo_list(repos_cfg, workspace, email, token):
     - "repos.csv"          → repos from CSV
     """
 
-    # Case 1: repositories: "*"
     if repos_cfg == "*":
         log_info("Migrating ALL Bitbucket repositories")
         return get_all_bitbucket_repos(workspace, email, token)
 
-    # Case 2: repositories: ["*"]
     if isinstance(repos_cfg, list) and repos_cfg == ["*"]:
         log_info("Migrating ALL Bitbucket repositories (list format)")
         return get_all_bitbucket_repos(workspace, email, token)
 
-    # Case 3: repositories: "file.csv"
     if isinstance(repos_cfg, str) and repos_cfg.endswith(".csv"):
         log_info(f"Migrating repositories from CSV: {repos_cfg}")
         return get_repos_from_csv(repos_cfg)
@@ -116,11 +115,23 @@ def sync_repos(config, secrets):
             GH["access_token"],
         )
 
+        # ---------- Clone or Update Mirror ----------
         if not os.path.exists(mirror):
+            log_info("Cloning mirror repository")
             run(["git", "clone", "--mirror", bb_url, mirror])
         else:
-            run(["git", "fetch", "--prune"], cwd=mirror)
+            log_info("Updating existing mirror")
+            # Ensure origin always has credentials
+            run(["git", "remote", "set-url", "origin", bb_url], cwd=mirror)
 
+            try:
+                run(["git", "fetch", "--prune"], cwd=mirror)
+            except subprocess.CalledProcessError:
+                log_info("Mirror fetch failed, recreating mirror")
+                shutil.rmtree(mirror)
+                run(["git", "clone", "--mirror", bb_url, mirror])
+
+        # ---------- Configure GitHub Remote ----------
         remotes = subprocess.check_output(
             ["git", "remote"], cwd=mirror
         ).decode()
@@ -130,8 +141,10 @@ def sync_repos(config, secrets):
         else:
             run(["git", "remote", "add", "github", gh_url], cwd=mirror)
 
+        # ---------- Push to GitHub ----------
         run(["git", "push", "--mirror", "github"], cwd=mirror)
 
+        # ---------- Set Default Branch ----------
         set_default_branch(
             config["github"]["organization"],
             repo,
